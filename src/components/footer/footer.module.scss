@@ -1,0 +1,15 @@
+.box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #dedede;
+    .btn__action {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}

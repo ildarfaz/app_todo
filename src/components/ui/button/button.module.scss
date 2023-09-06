@@ -1,0 +1,22 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        font-size: 1.8rem;
+        background: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 3px 5px;
+    }
+
+    .active {
+        border: 1px solid #dedede;
+        border-radius: 5px;
+    }
+
+}
