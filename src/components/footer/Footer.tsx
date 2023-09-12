@@ -13,7 +13,7 @@ export const Footer: FC = () => {
     const clearHandler = () => {
         console.log("clear");
     }
-    return <div className={styles.box}>
+    return <footer className={styles.box}>
         <p>{`2 items left`}</p>
         <div className={styles.btn__action}>
             <Button onClick={() => clickHandler(Btn.All)} active={activeBtn===Btn.All}>{Btn.All}</Button>
@@ -21,5 +21,5 @@ export const Footer: FC = () => {
             <Button onClick={() => clickHandler(Btn.Completed)} active={activeBtn===Btn.Completed}>{Btn.Completed}</Button>
         </div>
         <Button onClick={() => clearHandler()}>Clear completed</Button>
-    </div>
+    </footer>
 }

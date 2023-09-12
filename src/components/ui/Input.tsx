@@ -1,13 +1,23 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import styles from "./input.module.scss";
 
-export const Input: FC = () => {
-    const onHandlerChange = (str : string) => {
-        console.log(str);
-    }
+interface IInput {
+    onKeyDown: (value: string) => void,
+
+}
+
+export const Input: FC<IInput> = ({ onKeyDown }) => {
+    const inputRef = useRef<HTMLInputElement>(null);
+    const handleKeyDown = (event: { key: string }) => {
+        if (event.key === 'Enter'&&inputRef?.current?.value) {
+            onKeyDown(inputRef?.current?.value);
+            inputRef.current.value = "";
+        }
+    };
+
     return (
         <div className={styles.box}>
-            <input type="text" onChange={(e) => onHandlerChange(e.currentTarget.value)} placeholder="What need to be done?"/>
+            <input type="text" ref={inputRef} onKeyDown={handleKeyDown} placeholder="What need to be done?" />
         </div>
     )
 }
