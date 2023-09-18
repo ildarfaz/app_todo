@@ -1,10 +1,13 @@
 import { FC, useState } from "react";
 import { Button } from "../ui/button/Button";
 import styles from "./footer.module.scss";
+import { ITodo } from "../../types/store";
 
 enum Btn { All = "All", Active = "Active", Completed = "Completed" }
-
-export const Footer: FC = () => {
+interface IFooter {
+    list: ITodo[];
+}
+export const Footer: FC<IFooter> = ({list}) => {
     const [activeBtn, setActiveBtn] = useState("");
     const clickHandler = (item: Btn) => {
         setActiveBtn(item);
@@ -14,7 +17,7 @@ export const Footer: FC = () => {
         console.log("clear");
     }
     return <footer className={styles.box}>
-        <p>{`2 items left`}</p>
+        <p>{`${list.length} items left`}</p>
         <div className={styles.btn__action}>
             <Button onClick={() => clickHandler(Btn.All)} active={activeBtn===Btn.All}>{Btn.All}</Button>
             <Button onClick={() => clickHandler(Btn.Active)} active={activeBtn===Btn.Active}>{Btn.Active}</Button>
