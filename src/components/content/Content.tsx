@@ -14,7 +14,6 @@ export const Content: FC = () => {
     const handleKeyDown = (value: string) => {
         dispatch({ type: EAction.ADD_TODO, payload: value });
     };
-    console.log(state);
     return (
         <div className={styles.box}>
             <Input onKeyDown={handleKeyDown} />

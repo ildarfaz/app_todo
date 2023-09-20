@@ -8,13 +8,13 @@ interface IFooter {
     list: ITodo[];
 }
 export const Footer: FC<IFooter> = ({list}) => {
-    const [activeBtn, setActiveBtn] = useState("");
+    const [activeBtn, setActiveBtn] = useState(Btn.All);
     const clickHandler = (item: Btn) => {
         setActiveBtn(item);
 
     }
     const clearHandler = () => {
-        console.log("clear");
+
     }
     return <footer className={styles.box}>
         <p>{`${list.length} items left`}</p>

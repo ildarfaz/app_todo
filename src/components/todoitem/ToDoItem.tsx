@@ -8,7 +8,6 @@ interface ToDoItem {
 }
 
 export const ToDoItem: FC<ToDoItem> = ({ item }) => {
-    console.log(item)
     return (
         <div className={styles.box}>
             <input type="checkbox" checked = {item.done} />

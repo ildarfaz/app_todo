@@ -3,7 +3,6 @@ import styles from "./input.module.scss";
 
 interface IInput {
     onKeyDown: (value: string) => void,
-
 }
 
 export const Input: FC<IInput> = ({ onKeyDown }) => {
