@@ -4,9 +4,10 @@ import { Header } from "../header/Header";
 
 export const Wrapper = () => {
 
-    return (<div className={styles.box}>
-        <Header />
-        <Content />
-        
-    </div>)
+    return (
+        <div className={styles.box}>
+            <Header />
+            <Content />
+        </div>
+    )
 }
