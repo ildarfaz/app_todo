@@ -1,4 +1,4 @@
-import { Wrapper } from "./components/wrapper/Wrapper";
+import { Wrapper } from "./components/wrapper";
 
 export const App = () => {
 

@@ -1,5 +1,6 @@
 import { FC } from "react";
-import styles from "./button.module.scss";
+
+import styles from "./style.module.scss";
 
 type TButton = {
   children: JSX.Element | string;
@@ -7,6 +8,7 @@ type TButton = {
   active?: boolean;
   isDisabled?: boolean;
 }
+
 export const Button: FC<TButton> = ({ children, onClick, active, isDisabled = false }) => {
   return (
     <div className={styles.box}>
