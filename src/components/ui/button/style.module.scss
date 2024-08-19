@@ -12,11 +12,11 @@
         align-items: center;
         gap: 2rem;
         padding: 3px 5px;
+        border: 1px solid transparent;
     }
 
     .active {
         border: 1px solid #dedede;
         border-radius: 5px;
     }
-
 }

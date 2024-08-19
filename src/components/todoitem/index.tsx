@@ -20,7 +20,7 @@ export const ToDoItem: FC<ToDoItem> = ({ item, handleChange }) => {
                 checked={item.done}
                 readOnly
             />
-            <span>
+            <span className={`${item.done ? styles.box__title__done : ""}`}>
                 {item.title}
             </span>
         </div>

@@ -8,4 +8,9 @@
         font-size: 2.4rem;
     }
 
+    &__title {
+        &__done {
+            text-decoration: line-through;
+        }
+    }
 }

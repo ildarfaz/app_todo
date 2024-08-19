@@ -7,7 +7,8 @@ export interface ITodo {
 
 export interface IState {
     todoList: ITodo[];
-
+    filter: string;
+    filterList: ITodo[]
 }
 export interface IAction {
     type: EAction;

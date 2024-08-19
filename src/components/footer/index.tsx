@@ -1,20 +1,21 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 
 import { Button } from "../ui/button";
 import { ITodo } from "../../types/store";
+import { EFilterType } from "../../types/common";
 
 import styles from "./style.module.scss";
 
-enum Btn { All = "All", Active = "Active", Completed = "Completed" }
-interface IFooter {
+type TFooter = {
     list: ITodo[];
     handleClear: () => void;
+    handleFilter: (filter: EFilterType) => void;
+    activeFilter: string;
 }
-export const Footer: FC<IFooter> = ({ list, handleClear }) => {
-    const [activeBtn, setActiveBtn] = useState(Btn.All);
-    const handleClick = (item: Btn) => {
-        setActiveBtn(item);
 
+export const Footer: FC<TFooter> = ({ list, handleClear, handleFilter, activeFilter }) => {
+    const onHandleFilter = (item: EFilterType) => {
+        handleFilter(item);
     }
 
     const onClickComplete = () => {
@@ -25,26 +26,26 @@ export const Footer: FC<IFooter> = ({ list, handleClear }) => {
         <p>{`${list.length} items left`}</p>
         <div className={styles.btn__action}>
             <Button
-                onClick={() => handleClick(Btn.All)}
-                active={activeBtn === Btn.All}
+                onClick={() => onHandleFilter(EFilterType.ALL)}
+                active={activeFilter === EFilterType.ALL}
             >
-                {Btn.All}
+                {EFilterType.ALL}
             </Button>
             <Button
-                onClick={() => handleClick(Btn.Active)}
-                active={activeBtn === Btn.Active}
+                onClick={() => onHandleFilter(EFilterType.ACTIVE)}
+                active={activeFilter === EFilterType.ACTIVE}
             >
-                {Btn.Active}
+                {EFilterType.ACTIVE}
             </Button>
             <Button
-                onClick={() => handleClick(Btn.Completed)}
-                active={activeBtn === Btn.Completed}>
-                {Btn.Completed}
+                onClick={() => onHandleFilter(EFilterType.COMPLETED)}
+                active={activeFilter === EFilterType.COMPLETED}>
+                {EFilterType.COMPLETED}
             </Button>
         </div>
-        <Button 
-        onClick={() => onClickComplete()}>
+        <Button
+            onClick={onClickComplete}>
             Clear completed
-            </Button>
+        </Button>
     </footer>
 }
