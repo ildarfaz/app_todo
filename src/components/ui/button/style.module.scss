@@ -13,10 +13,10 @@
         gap: 2rem;
         padding: 3px 5px;
         border: 1px solid transparent;
+        border-radius: 5px;
     }
 
     .active {
-        border: 1px solid #dedede;
-        border-radius: 5px;
+        border-color: #dedede;
     }
 }
