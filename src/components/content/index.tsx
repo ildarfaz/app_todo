@@ -1,10 +1,11 @@
+"use client";
 import { FC, useReducer } from "react";
 
-import { Input } from "../ui/input";
-import { Footer } from "../footer";
-import { ToDoList } from "../todolist";
-import { EAction, EFilterType } from "../../types/common";
-import { reducer } from "../../stores/reducer";
+import { Input } from "@/ui/input";
+import { Footer } from "@/components/footer";
+import { ToDoList } from "@/components/todolist";
+import { EAction, EFilterType } from "@/types/common";
+import { reducer } from "@/stores/reducer";
 
 import styles from "./style.module.scss";
 

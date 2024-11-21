@@ -1,16 +1,16 @@
 import { EAction } from "./common";
-export interface ITodo {
+export type TTodo = {
     id: number;
     done: boolean;
     title: string;
 }
 
-export interface IState {
-    todoList: ITodo[];
+export type TState = {
+    todoList: TTodo[];
     filter: string;
-    filterList: ITodo[]
+    filterList: TTodo[];
 }
-export interface IAction {
+export type TAction = {
     type: EAction;
     payload: string;
 }
