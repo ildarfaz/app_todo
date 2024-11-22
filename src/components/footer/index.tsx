@@ -1,13 +1,13 @@
 import { FC } from "react";
 
-import { Button } from "../ui/button";
-import { ITodo } from "../../types/store";
-import { EFilterType } from "../../types/common";
+import { Button } from "@/ui/button";
+import { TTodo } from "@/types/store";
+import { EFilterType } from "@/types/common";
 
 import styles from "./style.module.scss";
 
 type TFooter = {
-    list: ITodo[];
+    list: TTodo[];
     handleClear: () => void;
     handleFilter: (filter: EFilterType) => void;
     activeFilter: string;

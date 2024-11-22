@@ -5,7 +5,7 @@ export const Header: FC = () => {
 
     return (
         <header>
-            <h1>todos</h1>
+            <h1>TO DO</h1>
         </header>
     );
 }

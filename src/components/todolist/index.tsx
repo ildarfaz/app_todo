@@ -1,12 +1,12 @@
 import { FC } from "react";
 
-import { ITodo } from "../../types/store";
+import { TTodo } from "../../types/store";
 import { ToDoItem } from "../todoitem";
 
 import styles from "./style.module.scss";
 
 interface IToDoList {
-    todos: ITodo[];
+    todos: TTodo[];
     handleChange: (id: number) => void;
 }
 
