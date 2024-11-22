@@ -1,8 +1,8 @@
 import { EFilterType } from './../types/common';
-import { IAction, IState } from "../types/store";
+import { TAction, TState } from "../types/store";
 import { EAction } from "../types/common";
 
-export const reducer = (state: IState, action: IAction) => {
+export const reducer = (state: TState, action: TAction) => {
 
     switch (action.type) {
         case EAction.ADD_TODO:
