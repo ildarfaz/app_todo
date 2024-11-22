@@ -20,12 +20,12 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
 
-      - name: Build and export project
-        run: npm run export
+      - name: Build project
+        run: npm run build
 
-      - name: Check exported files
+      - name: Check output files
         run: ls -la ./out
 
       - name: Upload production-ready build files
