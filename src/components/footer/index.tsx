@@ -23,7 +23,7 @@ export const Footer: FC<TFooter> = ({ list, handleClear, handleFilter, activeFil
     }
 
     return <footer className={styles.box}>
-        <p>{`${list.length} items left`}</p>
+        <p className={styles.box__title}>{`${list.length} items left`}</p>
         <div className={styles.btn__action}>
             <Button
                 onClick={() => onHandleFilter(EFilterType.ALL)}
